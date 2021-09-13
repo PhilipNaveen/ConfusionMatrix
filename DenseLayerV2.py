@@ -26,6 +26,8 @@ class DenseLayer:
         for point in range(len(self.outputs)): self.outputs[point] = ActivationFunctions.sigmoid(self.outputs[point])
       elif (self.activation == "relu"):
         for point in range(len(self.outputs)): self.outputs[point] = ActivationFunctions.relu(self.outputs[point])
+      elif (self.activation == "swish"):
+        for point in range(len(self.outputs)): self.outputs[point] = ActivationFunctions.swish(self.outputs[point])
       else:
         pass #when there is no kwarg that works, the network will assume no activation function
     
