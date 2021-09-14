@@ -24,3 +24,14 @@ class ActivationFunctions:
   @staticmethod
   def sigmoid_gradient(x):
     return ActivationFunctions.sigmoid(x) * (1 - ActivationFunctions.sigmoid(x))
+  
+  #swish activation
+  @staticmethod
+  def swish(x):
+    return x*ActivationFunctions.sigmoid(x)
+  
+  @staticmethod
+  def swish_gradient(x):
+    return ActivationFunctions.swish(x) + ActivationFunctions.sigmoid(x)*(1 - ActivationFunctions.swish(x))
+  
+  
